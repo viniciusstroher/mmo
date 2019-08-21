@@ -29,8 +29,8 @@ var PlayerController = {
 
 	selectSQM:function(){
 	    this.worldPoint = this.engine.input.activePointer.positionToCamera(this.engine.cameras.main);
-	    this.sourceMarker.x = MapController.map.worldToTileX(this.worldPoint.x);
-	    this.sourceMarker.y = MapController.map.worldToTileY(this.worldPoint.y);
+	    this.sourceMarker.x = MapController.map.worldToTileX(this.worldPoint.x)*23;
+	    this.sourceMarker.y = MapController.map.worldToTileY(this.worldPoint.y)*17;
 
 	}
 }
