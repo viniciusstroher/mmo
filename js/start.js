@@ -6,7 +6,8 @@ var config = {
     pixelArt: true,
     scene: {
         preload: preload,
-        create: create
+        create: create,
+        update: update
     }
 };
 
@@ -22,8 +23,17 @@ function preload ()
 
 function create ()
 {
-	this.cameras.main.setScroll(-27, -27);
+
 	MapController.create();
-	
-    //this.load.atlas('cube', 'assets/animations/cube.png', 'assets/animations/cube.json');
+
+	PlayerController.engine = this;
+	PlayerController.init();
+
+}
+
+function update (time, delta)
+{
+	// console.log(time,delta);
+    // PlayerController.controls.update(delta);
+    PlayerController.selectSQM();
 }
