@@ -34,6 +34,6 @@ function create ()
 function update (time, delta)
 {
 	// console.log(time,delta);
-    // PlayerController.controls.update(delta);
+    PlayerController.controls.update(delta);
     PlayerController.selectSQM();
 }
